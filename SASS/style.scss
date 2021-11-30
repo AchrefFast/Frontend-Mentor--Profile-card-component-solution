@@ -1,0 +1,159 @@
+@import 'variables';
+@import 'functions';
+
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    
+}
+
+h1, h2, p{
+    margin: 0;
+}
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    margin: 0;
+    z-index: -3;
+}
+
+.main{
+    background-color: color(pr-dark-cyan);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: grid;
+    place-items: center;
+    place-content: center;
+    overflow: hidden;
+    z-index: -2;
+
+    &::after, &::before{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        
+    }
+
+    &::before{
+        width: 70%;
+        height: 100%;
+        top: 55%;
+        left: 45%;
+        background: url(../images/bg-pattern-bottom.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &::after{
+        width: 70%;
+        height: 100%;
+        top: -35%;
+        left: -20%;
+        background: url(../images/bg-pattern-top.svg);
+        background-size: cover;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+    }
+}
+
+
+.card{
+    min-width: 300px;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    background-color: white;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.212);
+
+
+    .card__header{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 130px;
+        background-image: url(../images/bg-pattern-card.svg);
+
+    }
+
+    .card__content{
+        width: 100%;
+        margin-top: 80px;
+        z-index: 200;
+        display: grid;
+        justify-items: center;
+        row-gap: 11px;
+        padding: 0;
+        
+
+        .card__avatar{
+            border-radius: 50%;
+            border: 4px solid white;
+            margin: 0 auto;
+            
+        }
+
+        .card__username{
+            margin-bottom: -5px;
+            font-size: $f-size-username;
+            color: color(pr-desturated-blue);
+            span{
+                font-size: .9em;
+                font-weight: lighter;
+                color: color(nt-dark-gray);
+            }
+        }
+
+        .card__birth{
+            
+            font-size: $f-size-birth;
+            color: color(nt-dark-gray);
+        }
+    }
+}
+
+.card__details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    padding: 1.4em 3.2em;
+    position: relative;
+    
+    &::after{
+        content: '';
+        position: absolute;
+        background: rgb(230, 230, 230);
+        height: 1px;
+        top: 0;
+        left: 0;
+        right: 0;
+
+    }
+
+    .card__number{
+        font-size: 17px;
+        font-weight: 700;
+        color: color(pr-desturated-blue);
+    }
+
+    .card__number-of{
+        margin-top: 4px;
+        color: color(nt-dark-gray);
+        font-size: $f-size-likes;
+        letter-spacing: 1.1px;
+        margin-top: 5px;
+    }
+
+    .card__followers + .card__followers{
+        margin-left: 3em;
+    }
+}
+
+
