@@ -37,8 +37,8 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 ### Links
 
--  [Solution URL](https://github.com/AchrefFast/Frontend-Mentor--NFT-preview-card-componen)
-- [Live Site URL](https://achreffast.github.io/Frontend-Mentor--NFT-preview-card-componen/)
+-  [Solution URL](https://github.com/AchrefFast/Frontend-Mentor--Profile-card-component-solution)
+- [Live Site URL](https://achreffast.github.io/Frontend-Mentor--Profile-card-component-solution/)
 
 ## My process
 
